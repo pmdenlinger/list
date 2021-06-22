@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        List {
+//            Iterable data that conforms identifiable
+            ForEach(1...10, id: \.self) {index in Text("List Value = \(index)")
+                
+            }
+            .listStyle(InsetGroupedListStyle())
+        }
     }
 }
 
